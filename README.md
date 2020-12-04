@@ -14,7 +14,7 @@
  
 ## 📌 Introduction
 
-This is a basic implementation of Blockchain in C++. Since blockchains use cryptography, this repo uses some cryptographic functionality in our blockchain. We have used the SHA256 hashing technique to create hashes of our blocks. 
+Here We will be making an app which will use an api calling to create a recipe book from https://www.food2fork.ca/. It will have a lot of queries to be tackle with. We will make an app where first screen will show the list of common cooking items such as Eggs, Chicken, Beef etc, and a search bar. Then Second Page will take us to different recipies of that item along with a photo and a rating, if we press any of that item it will show the list of ingredients. We will try to use on flutter in this Application.
 
 ## ⭐ How to get started?
 
@@ -34,9 +34,10 @@ You can refer to the following articles on the basics of Git and Github and also
 - Take a look at the Existing [Issues]or create your own Issues!
 - Wait for the Issue to be assigned to you after which you can start working on it.
 - Fork the Repo and create a Branch for any Issue that you are working upon.
-- Read the [Code of Conduct](https://github.com/Tejas1510/BlockChain-Test/blob/master/Code_Of_Conduct.MD)
+- Read the [Code of Conduct](https://github.com/Tejas1510/RecipeBookFlutter/blob/main/CODE_OF_CONDUCT.md)
 - Create a Pull Request which will be promptly reviewed and suggestions would be added to improve it.
 - Add Screenshots to help us know what this Script is all about.
+- Join Disord : https://discord.gg/JypmNUHQER
 
 ## ⭐ Issues:
 For major changes, you are welcome to open an issue to discuss what you would like to change. Enhancements will be appreciated.
