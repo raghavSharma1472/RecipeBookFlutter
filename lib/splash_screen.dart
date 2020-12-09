@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:recipe_book_flutter/home.dart';
+import 'package:recipe_book_flutter/screens/product/products_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -12,9 +12,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(milliseconds: 2000),
-      () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()))
-    );
+        Duration(milliseconds: 2000),
+        () => Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => ProductsScreen())));
   }
 
   @override
@@ -26,12 +26,18 @@ class _SplashScreenState extends State<SplashScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
-            child: SizedBox(height: 80.0, width: 80.0,
-              child: Image.asset('assets/icon.png')
-            ),
+            child: SizedBox(
+                height: 80.0,
+                width: 80.0,
+                child: Image.asset('assets/icon.png')),
           ),
-          SizedBox(height: 10.0,),
-          Text('Recipe Book', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)
+          SizedBox(
+            height: 10.0,
+          ),
+          Text(
+            'Recipe Book',
+            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          )
         ],
       ),
     );
