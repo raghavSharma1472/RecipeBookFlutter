@@ -17,34 +17,21 @@ class ChatAndAddToCart extends StatelessWidget {
         vertical: kDefaultPadding / 2,
       ),
       decoration: BoxDecoration(
-        color: kBlackColor,
-        borderRadius: BorderRadius.circular(30),
+        color: custom_black,
+        borderRadius: BorderRadius.circular(20),
       ),
-      child: Row(
-        children: <Widget>[
-          SvgPicture.asset(
-            "assets/icons/dish.svg",
+      child: Center(
+        child: FlatButton.icon(
+          onPressed: () {},
+          icon: SvgPicture.asset(
+            "assets/icons/fast-food.svg",
             height: 18,
           ),
-          SizedBox(width: kDefaultPadding / 2),
-          Text(
-            "Order Now",
+          label: Text(
+            "Add to Menu",
             style: TextStyle(color: Colors.white),
           ),
-          // it will cover all available spaces
-          Spacer(),
-          FlatButton.icon(
-            onPressed: () {},
-            icon: SvgPicture.asset(
-              "assets/icons/fast-food.svg",
-              height: 18,
-            ),
-            label: Text(
-              "Add to Menu",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

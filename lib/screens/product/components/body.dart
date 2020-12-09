@@ -24,7 +24,7 @@ class Body extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(top: 70),
                   decoration: BoxDecoration(
-                    color: kBackgroundColor,
+                    color: custom_white,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(40),
                       topRight: Radius.circular(40),

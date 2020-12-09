@@ -12,7 +12,7 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kPrimaryColor,
+      backgroundColor: custom_grey,
       appBar: buildAppBar(context),
       body: Body(
         product: product,
@@ -22,7 +22,7 @@ class DetailsScreen extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: custom_white,
       elevation: 0,
       leading: IconButton(
         padding: EdgeInsets.only(left: kDefaultPadding),

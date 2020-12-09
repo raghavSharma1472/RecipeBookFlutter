@@ -37,7 +37,7 @@ class ProductCard extends StatelessWidget {
               height: 136,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(22),
-                color: itemIndex.isEven ? kBlackColor : kSecondaryColor,
+                color: itemIndex.isEven ? custom_black : custom_yellow,
                 boxShadow: [kDefaultShadow],
               ),
               child: Container(
@@ -98,7 +98,7 @@ class ProductCard extends StatelessWidget {
                       itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
                       itemBuilder: (context, _) => Icon(
                         Icons.star,
-                        color: kSecondaryColor,
+                        color: custom_yellow,
                       ),
                       onRatingUpdate: (rating) {
                         print(rating);
@@ -111,14 +111,14 @@ class ProductCard extends StatelessWidget {
                         vertical: kDefaultPadding / 4, // 5 top and bottom
                       ),
                       decoration: BoxDecoration(
-                        color: kSecondaryColor,
+                        color: custom_yellow,
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(22),
                           topRight: Radius.circular(22),
                         ),
                       ),
                       child: Text(
-                        "\$${product.price}",
+                        "${product.price}",
                         style: Theme.of(context).textTheme.button,
                       ),
                     ),

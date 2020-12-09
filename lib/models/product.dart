@@ -1,6 +1,6 @@
 class Product {
-  final int id, price;
-  final String title, description, image;
+  final int id;
+  final String title, description, image, price;
 
   Product({this.id, this.price, this.title, this.description, this.image});
 }
@@ -10,50 +10,44 @@ class Product {
 List<Product> products = [
   Product(
     id: 1,
-    price: 16,
+    price: "NonVeg",
     title: "Recipe Number 1",
     image: "assets/images/Item_1.png",
-    description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    description: "Ingridient 1\nIngridient 2\nIngridient 3",
   ),
   Product(
     id: 2,
-    price: 14,
+    price: "Veg",
     title: "Recipe Number 2",
     image: "assets/images/Item_2.png",
-    description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    description: "Ingridient 1\nIngridient 2\nIngridient 3",
   ),
   Product(
     id: 3,
-    price: 18,
+    price: "NonVeg",
     title: "Recipe Number 3",
     image: "assets/images/Item_3.png",
-    description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    description: "Ingridient 1\nIngridient 2\nIngridient 3",
   ),
   Product(
     id: 4,
-    price: 16,
+    price: "Veg",
     title: "Recipe Number 4",
     image: "assets/images/Item_2.png",
-    description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    description: "Ingridient 1\nIngridient 2\nIngridient 3",
   ),
   Product(
     id: 5,
-    price: 18,
+    price: "NonVeg",
     title: "Recipe Number 5",
     image: "assets/images/Item_1.png",
-    description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    description: "Ingridient 1\nIngridient 2\nIngridient 3",
   ),
   Product(
     id: 6,
-    price: 09,
+    price: "Veg",
     title: "Recipe Number 6",
     image: "assets/images/Item_3.png",
-    description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    description: "Ingridient 1\nIngridient 2\nIngridient 3",
   ),
 ];

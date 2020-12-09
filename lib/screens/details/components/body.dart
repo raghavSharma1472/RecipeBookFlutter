@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
               decoration: BoxDecoration(
-                color: kBackgroundColor,
+                color: custom_white,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
@@ -52,11 +52,11 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '\$${product.price}',
+                    '${product.price}',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
-                      color: kBlackColor,
+                      color: custom_black,
                     ),
                   ),
                   RatingBar.builder(
@@ -68,7 +68,7 @@ class Body extends StatelessWidget {
                     itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
                     itemBuilder: (context, _) => Icon(
                       Icons.star,
-                      color: kSecondaryColor,
+                      color: custom_yellow,
                     ),
                     onRatingUpdate: (rating) {
                       print(rating);
@@ -79,7 +79,7 @@ class Body extends StatelessWidget {
                         EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
                     child: Text(
                       product.description,
-                      style: TextStyle(color: kBlackColor),
+                      style: TextStyle(color: custom_black),
                     ),
                   ),
                   SizedBox(height: kDefaultPadding),
