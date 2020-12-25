@@ -3,18 +3,40 @@ import 'package:recipe_book_flutter/components/search_box.dart';
 import 'package:recipe_book_flutter/constants.dart';
 import 'package:recipe_book_flutter/models/product.dart';
 import 'package:recipe_book_flutter/screens/details/details_screen.dart';
+import 'package:recipe_book_flutter/services/networking.dart';
+import 'package:recipe_book_flutter/services/search_data.dart';
 
 import 'category_list.dart';
 import 'product_card.dart';
 
-class Body extends StatelessWidget {
+
+
+
+String dishName;
+
+class Body extends StatefulWidget {
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       bottom: false,
       child: Column(
         children: <Widget>[
-          SearchBox(onChanged: (value) {}),
+          SearchBox(onChanged: (value) async {
+//            print(value);
+                setState(() {
+                  dishName=value;
+                });
+          },onEditingComplete: (){
+            Navigator.push(context, MaterialPageRoute(builder: (c){
+              print ('Here');
+              return SearchData(dishName);
+            }));
+          },),
           CategoryList(),
           SizedBox(height: kDefaultPadding / 2),
           Expanded(

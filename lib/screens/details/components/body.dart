@@ -78,7 +78,7 @@ class Body extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
                     child: Text(
-                      product.description,
+                      '${product.description[0]}\n${product.description[1]}\n${product.description[2]}',
                       style: TextStyle(color: custom_black),
                     ),
                   ),
