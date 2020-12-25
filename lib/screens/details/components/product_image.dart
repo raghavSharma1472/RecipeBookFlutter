@@ -42,7 +42,7 @@ class ProductPoster extends StatelessWidget {
   }
 }
 
-
+//Previous Data
 //Image.asset(
 //image,
 //height: size.width * 0.75,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import "package:flutter_svg/svg.dart";
 import 'package:recipe_book_flutter/constants.dart';
 import 'screens/product/components/category_list.dart';
 import 'screens/product/components/product_card.dart';
@@ -31,7 +30,6 @@ class SearchResult extends StatelessWidget {
             Expanded(
               child: Stack(
                 children: <Widget>[
-                  // Our background
                   Container(
                     margin: EdgeInsets.only(top: 70),
                     decoration: BoxDecoration(
@@ -43,7 +41,6 @@ class SearchResult extends StatelessWidget {
                     ),
                   ),
                   ListView.builder(
-                    // here we use our demo products list
                     itemCount: products.length,
                     itemBuilder: (context, index) => ProductCard(
                       itemIndex: index,

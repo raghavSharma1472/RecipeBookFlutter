@@ -94,6 +94,7 @@ class Body extends StatelessWidget {
   }
 }
 
+//For whole list of ingredients
 //ListView.builder(
 //itemCount: product.description.length,
 //itemBuilder: (c, i) {

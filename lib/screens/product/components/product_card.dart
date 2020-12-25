@@ -130,7 +130,7 @@ class ProductCard extends StatelessWidget {
     );
   }
 }
-
+//Previous Widget
 //Image.asset(
 //product.image,
 //fit: BoxFit.cover,

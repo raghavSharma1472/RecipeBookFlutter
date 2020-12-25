@@ -1,11 +1,9 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 
 class Networking{
 
   final String url;
-
   Networking(this.url);
 
   Future getData ()async{
@@ -17,9 +15,5 @@ class Networking{
     }catch(e){
       print(e);
     }
-
-
   }
-
-
 }

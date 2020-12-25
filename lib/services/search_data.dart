@@ -17,13 +17,16 @@ class SearchData extends StatefulWidget {
 
 class _SearchDataState extends State<SearchData> {
   void getData() async {
-    var pp = await fun();
-    print(pp.length);
+    var productList = await funForSearchData();
     Navigator.push(
-        context, MaterialPageRoute(builder: (c) => SearchResult(pp)));
+      context,
+      MaterialPageRoute(
+        builder: (c) => SearchResult(productList),
+      ),
+    );
   }
 
-  Future<List<Product>> fun() async {
+  Future<List<Product>> funForSearchData() async {
     Networking networking = Networking(url + widget.dishName);
     var jasonData = await networking.getData();
     print(jasonData['results'][0]['title']);
@@ -34,11 +37,9 @@ class _SearchDataState extends State<SearchData> {
         title: jasonData['results'][i]['title'],
         image: jasonData['results'][i]['featured_image'],
         description: jasonData['results'][i]['ingredients'],
-//          price:jasonData['results'][i]['rating']
       );
       list.add(product);
     }
-//    print(list.length);
     return list;
   }
 
@@ -62,7 +63,7 @@ class _SearchDataState extends State<SearchData> {
                 'WAIT',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 24.0,
+                  fontSize: 84.0,
                 ),
               ),
             ],

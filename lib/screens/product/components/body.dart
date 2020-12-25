@@ -27,7 +27,6 @@ class _BodyState extends State<Body> {
       child: Column(
         children: <Widget>[
           SearchBox(onChanged: (value) async {
-//            print(value);
                 setState(() {
                   dishName=value;
                 });
