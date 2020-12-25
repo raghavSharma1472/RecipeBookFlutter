@@ -93,3 +93,13 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+//ListView.builder(
+//itemCount: product.description.length,
+//itemBuilder: (c, i) {
+//return Text(
+//product.description[i],
+//style: TextStyle(color: custom_black),
+//);
+//},
+//)

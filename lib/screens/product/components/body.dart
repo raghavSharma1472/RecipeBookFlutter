@@ -32,10 +32,11 @@ class _BodyState extends State<Body> {
                   dishName=value;
                 });
           },onEditingComplete: (){
-            Navigator.push(context, MaterialPageRoute(builder: (c){
-              print ('Here');
-              return SearchData(dishName);
-            }));
+              if(dishName.isNotEmpty){
+                Navigator.push(context, MaterialPageRoute(builder: (c){
+                  return SearchData(dishName);
+                }));
+              }
           },),
           CategoryList(),
           SizedBox(height: kDefaultPadding / 2),
