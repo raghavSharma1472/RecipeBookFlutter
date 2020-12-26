@@ -78,7 +78,7 @@ class Body extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
                     child: Text(
-                      product.description,
+                      '${product.description[0]}\n${product.description[1]}\n${product.description[2]}',
                       style: TextStyle(color: custom_black),
                     ),
                   ),
@@ -93,3 +93,14 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+//For whole list of ingredients
+//ListView.builder(
+//itemCount: product.description.length,
+//itemBuilder: (c, i) {
+//return Text(
+//product.description[i],
+//style: TextStyle(color: custom_black),
+//);
+//},
+//)
