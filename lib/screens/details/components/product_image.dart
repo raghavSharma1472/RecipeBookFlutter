@@ -30,7 +30,7 @@ class ProductPoster extends StatelessWidget {
               shape: BoxShape.circle,
             ),
           ),
-          Image.asset(
+          Image.network(
             image,
             height: size.width * 0.75,
             width: size.width * 0.75,
@@ -41,3 +41,11 @@ class ProductPoster extends StatelessWidget {
     );
   }
 }
+
+//Previous Data
+//Image.asset(
+//image,
+//height: size.width * 0.75,
+//width: size.width * 0.75,
+//fit: BoxFit.cover,
+//)
