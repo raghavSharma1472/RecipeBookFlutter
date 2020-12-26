@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  lottie: ^0.7.0+1
   flutter:
     sdk: flutter
   flutter_rating_bar: ^3.2.0+1
@@ -57,6 +58,7 @@ flutter:
     - assets/icon.png
     - assets/images/
     - assets/icons/
+    - assets/cooking.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
