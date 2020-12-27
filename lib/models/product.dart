@@ -1,3 +1,5 @@
+import 'package:recipe_book_flutter/services/search_data00.dart';
+
 class Product {
   final int id;
   final String title, image, price;
@@ -10,6 +12,9 @@ class Product {
 List<String> dis = ['s'];
 // list of products
 // for our demo
+
+
+
 List<Product> products = [
   Product(
     id: 1,
@@ -60,3 +65,4 @@ List<Product> products = [
     description: ["Ingridient 1","Ingridient 2","Ingridient 3"],
   ),
 ];
+

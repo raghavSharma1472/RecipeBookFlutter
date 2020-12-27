@@ -5,6 +5,8 @@ import 'package:recipe_book_flutter/constants.dart';
 import 'components/body.dart';
 
 class ProductsScreen extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

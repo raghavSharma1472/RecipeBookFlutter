@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:recipe_book_flutter/screens/product/products_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -12,8 +13,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(milliseconds: 2000),
-        () => Navigator.pushReplacement(context,
+        Duration(milliseconds: 3000),
+            () => Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => ProductsScreen())));
   }
 
@@ -26,17 +27,17 @@ class _SplashScreenState extends State<SplashScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
-            child: SizedBox(
-                height: 80.0,
-                width: 80.0,
-                child: Image.asset('assets/icon.png')),
+              child: Lottie.asset('assets/cooking.json'),
           ),
           SizedBox(
             height: 10.0,
           ),
           Text(
-            'Recipe Book',
-            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+            'RECIPE BOOK',
+            style: TextStyle(
+              fontSize: 56.0,
+              fontWeight: FontWeight.bold,
+            ),
           )
         ],
       ),
