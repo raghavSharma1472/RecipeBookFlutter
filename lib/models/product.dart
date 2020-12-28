@@ -1,4 +1,4 @@
-import 'package:recipe_book_flutter/services/search_data00.dart';
+import 'package:recipe_book_flutter/services/jsonToClassData.dart';
 
 class Product {
   final int id;

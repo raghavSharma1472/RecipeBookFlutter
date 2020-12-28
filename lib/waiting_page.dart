@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:recipe_book_flutter/search_result.dart';
 import 'package:lottie/lottie.dart';
-import 'package:recipe_book_flutter/services/search_data00.dart';
+import 'package:recipe_book_flutter/services/jsonToClassData.dart';
 
 class WaitingPage extends StatefulWidget {
   final dishName;
