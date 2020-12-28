@@ -1,6 +1,7 @@
 import 'networking.dart';
 import 'package:recipe_book_flutter/models/product.dart';
 
+
 const url = 'https://food2fork.ca/api/recipe/search/?page=2&query=';
 
 

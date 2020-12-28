@@ -5,7 +5,6 @@ import 'package:recipe_book_flutter/search_result.dart';
 import 'package:lottie/lottie.dart';
 import 'package:recipe_book_flutter/services/search_data00.dart';
 
-
 class WaitingPage extends StatefulWidget {
   final dishName;
   WaitingPage(this.dishName);
@@ -15,7 +14,7 @@ class WaitingPage extends StatefulWidget {
 }
 
 class _WaitingPageState extends State<WaitingPage> {
-   void getData() async {
+  void getData() async {
     var productList = await SearchData().funForSearchData(widget.dishName);
     Navigator.pushReplacement(
       context,
@@ -24,8 +23,6 @@ class _WaitingPageState extends State<WaitingPage> {
       ),
     );
   }
-
-
 
   @override
   void initState() {
@@ -44,9 +41,9 @@ class _WaitingPageState extends State<WaitingPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Expanded(
-                  child: Lottie.asset(
-                      'assets/loading.json',
-                  ),
+                child: Lottie.asset(
+                  'assets/loading.json',
+                ),
               ),
             ],
           ),
