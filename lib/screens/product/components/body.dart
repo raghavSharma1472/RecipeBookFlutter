@@ -1,11 +1,10 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:recipe_book_flutter/components/search_box.dart';
 import 'package:recipe_book_flutter/constants.dart';
 import 'package:recipe_book_flutter/models/product.dart';
 import 'package:recipe_book_flutter/screens/details/details_screen.dart';
-import 'package:recipe_book_flutter/services/networking.dart';
-import 'package:recipe_book_flutter/services/search_data.dart';
-
+import 'package:recipe_book_flutter/waiting_page.dart';
 import 'category_list.dart';
 import 'product_card.dart';
 
@@ -15,11 +14,17 @@ import 'product_card.dart';
 String dishName;
 
 class Body extends StatefulWidget {
+
+
   @override
   _BodyState createState() => _BodyState();
 }
 
+
+
 class _BodyState extends State<Body> {
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -33,7 +38,7 @@ class _BodyState extends State<Body> {
           },onEditingComplete: (){
               if(dishName.isNotEmpty){
                 Navigator.push(context, MaterialPageRoute(builder: (c){
-                  return SearchData(dishName);
+                  return WaitingPage(dishName);
                 }));
               }
           },),
