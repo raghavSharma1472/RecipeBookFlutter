@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:recipe_book_flutter/models/product.dart';
 
@@ -59,10 +60,7 @@ class ProductCard extends StatelessWidget {
                   height: 160,
                   // image is square but we add extra 20 + 20 padding thats why width is 200
                   width: 200,
-                  child: Image.asset(
-                    product.image,
-                    fit: BoxFit.cover,
-                  ),
+                  child: Image(image: NetworkImage(product.image),fit: BoxFit.cover,),
                 ),
               ),
             ),
@@ -132,3 +130,8 @@ class ProductCard extends StatelessWidget {
     );
   }
 }
+//Previous Widget
+//Image.asset(
+//product.image,
+//fit: BoxFit.cover,
+//)

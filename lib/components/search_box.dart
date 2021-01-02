@@ -7,9 +7,11 @@ class SearchBox extends StatelessWidget {
   const SearchBox({
     Key key,
     this.onChanged,
+    this.onEditingComplete
   }) : super(key: key);
 
   final ValueChanged onChanged;
+  final Function onEditingComplete;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class SearchBox extends StatelessWidget {
       ),
       child: TextField(
         onChanged: onChanged,
+        onEditingComplete:onEditingComplete,
         style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
           enabledBorder: InputBorder.none,
