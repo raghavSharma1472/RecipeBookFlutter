@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:lottie/lottie.dart';
 import 'package:recipe_book_flutter/screens/product/products_screen.dart';
 
@@ -26,7 +27,9 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Center(child: Lottie.asset('assets/cooking.json')),
+          Center(
+            child: Lottie.asset('assets/cooking.json',fit: BoxFit.contain),
+          ),
           SizedBox(
             height: 10.0,
           ),

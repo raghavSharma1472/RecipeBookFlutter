@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../constants.dart';
+import 'package:recipe_book_flutter/saving/saving.dart';
 
-class ChatAndAddToCart extends StatelessWidget {
+import '../../../models/product.dart';
+class ChatAndAddToCart extends StatefulWidget {
   const ChatAndAddToCart({
     Key key,
+    this.product
   }) : super(key: key);
 
+  final product;
+  @override
+  _ChatAndAddToCartState createState() => _ChatAndAddToCartState();
+}
+
+class _ChatAndAddToCartState extends State<ChatAndAddToCart> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +30,11 @@ class ChatAndAddToCart extends StatelessWidget {
       ),
       child: Center(
         child: FlatButton.icon(
-          onPressed: () {},
+          onPressed: () async {
+          Product v= await changing(widget.product);
+          insertData(v);
+          readData();
+          },
           icon: SvgPicture.asset(
             "assets/icons/fast-food.svg",
             height: 18,

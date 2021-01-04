@@ -2,11 +2,30 @@ import 'package:recipe_book_flutter/services/jsonToClassData.dart';
 
 class Product {
   final int id;
-  final String title, image, price;
+  final String title, price;
   final List<dynamic> description;
+  final image;
+
 
   Product({this.id, this.price, this.title, this.description, this.image});
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'title': title,
+      'description':description,
+      'image':image,
+    };
+  }
+
+  @override
+  String toString() {
+    return 'Product{id: $id, title: $title, description: $description,image :$image}';
+  }
+
 }
+
+
 
 
 List<String> dis = ['s'];
