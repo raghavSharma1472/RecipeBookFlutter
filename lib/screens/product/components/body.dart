@@ -25,6 +25,9 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
 
 
+
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -60,10 +63,10 @@ class _BodyState extends State<Body> {
                 ),
                 ListView.builder(
                   // here we use our demo products list
-                  itemCount: products.length,
+                  itemCount:10,
                   itemBuilder: (context, index) => ProductCard(
                     itemIndex: index,
-                    product: products[index],
+                    product:products[index],
                     press: () {
                       Navigator.push(
                         context,
