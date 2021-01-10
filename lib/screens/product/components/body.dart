@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:recipe_book_flutter/components/search_box.dart';
 import 'package:recipe_book_flutter/constants.dart';
@@ -8,25 +7,14 @@ import 'package:recipe_book_flutter/waiting_page.dart';
 import 'category_list.dart';
 import 'product_card.dart';
 
-
-
-
 String dishName;
 
 class Body extends StatefulWidget {
-
-
   @override
   _BodyState createState() => _BodyState();
 }
 
-
-
 class _BodyState extends State<Body> {
-
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +51,7 @@ class _BodyState extends State<Body> {
                 ),
                 ListView.builder(
                   // here we use our demo products list
-                  itemCount:10,
+                  itemCount:6,
                   itemBuilder: (context, index) => ProductCard(
                     itemIndex: index,
                     product:products[index],

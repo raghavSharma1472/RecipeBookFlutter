@@ -51,13 +51,13 @@ class ProductCard extends StatelessWidget {
             ),
             // our product image
             Positioned(
-              top: 0,
+              top: 45,
               right: 0,
               child: Hero(
                 tag: '${product.id}',
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                  height: 160,
+                  height: 100,
                   // image is square but we add extra 20 + 20 padding thats why width is 200
                   width: 200,
                   child: Image(image: NetworkImage(product.image),fit: BoxFit.cover,),
