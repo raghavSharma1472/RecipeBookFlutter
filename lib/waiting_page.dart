@@ -15,13 +15,21 @@ class WaitingPage extends StatefulWidget {
 
 class _WaitingPageState extends State<WaitingPage> {
   void getData() async {
-    var productList = await SearchData().funForSearchData(widget.dishName);
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (c) => SearchResult(productList),
-      ),
-    );
+    if(widget.dishName!=null){
+      var productList = await SearchData().funForSearchData(widget.dishName);
+      if(productList!=null){
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (c) => SearchResult(productList),
+          ),
+        );
+      }else{
+        print("Does not Exist");
+      }
+    }else{
+      print('Some Error Occured....');
+    }
   }
 
   @override
